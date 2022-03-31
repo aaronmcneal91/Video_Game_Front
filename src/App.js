@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import SalesChart from './Components/VideoGameChart/VideoGameChart';
+
+
+
 
 
 function App() {
@@ -17,9 +21,16 @@ function App() {
   }
   return (
     <div>
-      <h3>Hello</h3>
+      <h3>Hello, have some games</h3>
+      <div>
+        <SalesChart parentEntries = {entries}/>
+      </div>
+      <td></td>
+
     </div>
   );
 }
+
+
 
 export default App;
