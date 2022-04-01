@@ -8,22 +8,33 @@ import SalesChart from './Components/VideoGameChart/VideoGameChart';
 
 function App() {
 
-  const [entries, setGames] = useState([])
+  const [videoGames, setVideoGames] = useState([])
 
   useEffect(()=> {
-    getGames();
+    getVideoGames();
   }, [])
 
-  async function getGames(){
+  async function getVideoGames(){
     let response = await axios.get('https://localhost:7260/api/games');
     console.log(response.data)
-    setGames(response.data);
+    setVideoGames(response.data);
+
+  // async function getPlatform(){
+  //   let response = await axios.get('https://localhost:7260/api/games');
+  //   const result = response.data.filter(games =>{
+  //     if (games.parentEntries ===query){
+  //       return games
+  //     }
+
+  //   })
+  //   console.log(response.data)
   }
+  
   return (
     <div>
       <h3>Hello, have some games</h3>
       <div>
-        <SalesChart parentEntries = {entries}/>
+        <SalesChart  videoGames = {videoGames}/>
       </div>
       <td></td>
 
