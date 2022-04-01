@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import EntryData from '../../VideoGameDetails';
 
 
-
-
 const SalesChart =  ({videoGames}) => {
 
     function generateData(){
@@ -25,9 +23,7 @@ const SalesChart =  ({videoGames}) => {
     let platformArrays = distinctPlatforms.map(platform =>{
 
         let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
-        
-   
-
+        console.log(`${platform}:`, allGamesForPlatform)
  
 
         return [platform, 10, "silver"]
