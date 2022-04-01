@@ -23,17 +23,19 @@ const SalesChart =  ({videoGames}) => {
     let platformArrays = distinctPlatforms.map(platform =>{
 
         let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
-        console.log(`${platform}:`, allGamesForPlatform)
+        console.log(`${platform} Games:`, allGamesForPlatform)
  
         let platformGlobalSales = allGamesForPlatform.map(game => game.globalSales)
         console.log(`${platform} Global Sales:`, platformGlobalSales)
 
-        return [platform, 10, "silver"]
+
+        let sumOfPlatformGlobalSales = platformGlobalSales.reduce((a, b) => a + b, 0);
+        console.log(`${platform} Sales Total:`,sumOfPlatformGlobalSales)
+
+        return [platform, sumOfPlatformGlobalSales, "blue"]
         
       });
     console.log("platform Arrays", platformArrays)
-    
-  
     
     const data =[
         ["Platform", "Sales", {role: "style"}],
