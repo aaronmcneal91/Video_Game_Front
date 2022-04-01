@@ -1,5 +1,6 @@
 import Chart from 'react-google-charts';
 import React, { useState, useEffect } from 'react';
+import EntryData from '../../VideoGameDetails';
 
 
 
@@ -22,10 +23,18 @@ const SalesChart =  ({videoGames}) => {
     console.log("Distinct Platforms", distinctPlatforms)
 
     let platformArrays = distinctPlatforms.map(platform =>{
+
+        let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
+        
+   
+
+ 
+
         return [platform, 10, "silver"]
         
       });
     console.log("platform Arrays", platformArrays)
+    
   
     
     const data =[

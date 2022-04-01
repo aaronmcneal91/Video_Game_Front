@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import SalesChart from './Components/VideoGameChart/VideoGameChart';
+import EntryData from './VideoGameDetails';
+
 
 
 
