@@ -25,6 +25,8 @@ const SalesChart =  ({videoGames}) => {
         let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
         console.log(`${platform}:`, allGamesForPlatform)
  
+        let platformGlobalSales = allGamesForPlatform.map(game => game.globalSales)
+        console.log(`${platform} Global Sales:`, platformGlobalSales)
 
         return [platform, 10, "silver"]
         
