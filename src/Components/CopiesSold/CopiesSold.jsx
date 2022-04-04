@@ -15,9 +15,9 @@ const CopiesSold = (props) => {
         console.log('Platforms:', distinctPlatforms)
 
         let platformArrays = distinctPlatforms.map(platform => {
-            //debugger
             
-            let gameSalesPerPlatform = props.filteredVideoGames.filter(game => game.globalSales)
+            
+            let gameSalesPerPlatform = props.filterVideoGames.filter(game => game.globalSales > 2)
             
                 console.log(gameSalesPerPlatform)
             
@@ -27,8 +27,9 @@ const CopiesSold = (props) => {
 
         const data = [
             ['Platform', 'Copies Sold'],
-            ...platformArrays
+             ...platformArrays
         ]
+        console.log(data)
 
         return data
     }

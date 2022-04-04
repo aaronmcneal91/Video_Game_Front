@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import VideoGameDetails from '../../VideoGameDetails';
 
 const SearchBar = (props) => {
 
-    const [searchVideoGame, setSearchVideoGame] = useState('')
+    const [searchVideoGame, setSearchVideoGame] = useState([''])
 
     function handleSubmit(e){
         e.preventDefault()
