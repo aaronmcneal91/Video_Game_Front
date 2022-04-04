@@ -39,7 +39,7 @@ function App() {
       <h3>Platform Sales In Millions</h3>
       <div>
         <SalesChart  videoGames = {videoGames}/>
-        <CopiesSold videoGames={videoGames}/>
+        {/* <CopiesSold videoGames={videoGames}/> */}
         <SearchBar filterVideoGames={filterVideoGames}/>
         <VideoGameDetails filteredVideoGames={filteredVideoGames}/>
       </div>

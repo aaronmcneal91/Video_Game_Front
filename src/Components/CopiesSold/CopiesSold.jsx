@@ -17,13 +17,12 @@ const CopiesSold = (props) => {
         let platformArrays = distinctPlatforms.map(platform => {
             //debugger
             
-            let gameSalesPerPlatform = 
-            if(props.filteredVideoGames){
-                let gameSales = props.filteredVideoGames.filter(game => game.globalSales)
-                console.log(gameSales)
-            }
+            let gameSalesPerPlatform = props.filteredVideoGames.filter(game => game.globalSales)
             
-            return [platform, gameSales]
+                console.log(gameSalesPerPlatform)
+            
+            
+            return [platform, gameSalesPerPlatform]
         })
 
         const data = [
