@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import VideoGameDetails from '../../VideoGameDetails';
 
 const SearchBar = (props) => {
 

@@ -5,7 +5,6 @@ const VideoGameDetails = (props) => {
         <table className="data">
         <thead>
           <tr>
-          
           <th>Rank</th>
           <th>Name</th>
           <th>Platform</th>
@@ -17,12 +16,11 @@ const VideoGameDetails = (props) => {
           <th>Japan Sales</th>
           <th>Other Sales</th>
           <th>Global Sales</th>
-
           </tr>
         </thead>
           
         <tbody>
-          {props.videoGames.map((game, index) => { 
+          {props.filteredVideoGames.map((game, index) => { 
           return (
             <tr key={index}>
                 <td>{index + 1 }</td>
@@ -47,4 +45,5 @@ const VideoGameDetails = (props) => {
       </table>
      );
 }
+
 export default VideoGameDetails;

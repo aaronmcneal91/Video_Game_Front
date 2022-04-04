@@ -39,7 +39,7 @@ function App() {
       <div>
         <SalesChart  videoGames = {videoGames}/>
         <SearchBar filterVideoGames={filterVideoGames}/>
-        <VideoGameDetails videoGameDetails={VideoGameDetails}/>
+        <VideoGameDetails filteredVideoGames={filteredVideoGames}/>
       </div>
 
     </div>
