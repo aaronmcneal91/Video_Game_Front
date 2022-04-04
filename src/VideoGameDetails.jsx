@@ -23,7 +23,7 @@ const VideoGameDetails = (props) => {
           {props.filteredVideoGames.map((game, index) => { 
           return (
             <tr key={index}>
-                <td>{index + 1 }</td>
+                {/* <td>{index + 1}</td> */}
                 <td>{game.rank}</td>
                 <td>{game.name}</td>
                 <td>{game.platform}</td>

@@ -3,24 +3,32 @@ import React, { useState } from 'react';
 
 
 
-const CopiesSold = ({videoGames}) => {
+const CopiesSold = (props) => {
 
     function generateSales(){
 
-        let platforms = videoGames.map(game => {
+        let platforms = props.videoGames.map(game => {
             return game.platform
         })
 
         let distinctPlatforms = [...new Set(platforms)]
-        console.log('Platforms: ', distinctPlatforms)
+        console.log('Platforms:', distinctPlatforms)
 
+        let platformArrays = distinctPlatforms.map(platform => {
+            //debugger
+            
+            let gameSalesPerPlatform = 
+            if(props.filteredVideoGames){
+                let gameSales = props.filteredVideoGames.filter(game => game.globalSales)
+                console.log(gameSales)
+            }
+            
+            return [platform, gameSales]
+        })
 
         const data = [
             ['Platform', 'Copies Sold'],
-            ['Xbox', 5],
-            ['PS3', 10],
-            ['DS', 15],
-            ['Wii', 20],
+            ...platformArrays
         ]
 
         return data
