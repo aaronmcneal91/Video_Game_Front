@@ -1,6 +1,6 @@
 import React from "react";
 
-const EntryData = (props) => {
+const VideoGameDetails = (props) => {
     return ( 
         <table className="data">
         <thead>
@@ -22,31 +22,29 @@ const EntryData = (props) => {
         </thead>
           
         <tbody>
-          {props.parentEntries.map((entry, index) => { 
+          {props.videoGames.map((game, index) => { 
           return (
             <tr key={index}>
                 <td>{index + 1 }</td>
-                <td>{entry.rank}</td>
-                <td>{entry.name}</td>
-                <td>{entry.platform}</td>
-                <td>{entry.year}</td>
-                <td>{entry.genre}</td>
-                <td>{entry.publisher}</td>
-                <td>{entry.northAmericaSales}</td>
-                <td>{entry.europeSales}</td>
-                <td>{entry.japanSales}</td>
-                <td>{entry.otherSales}</td>
-                <td>{entry.globalSales}</td>
-
+                <td>{game.rank}</td>
+                <td>{game.name}</td>
+                <td>{game.platform}</td>
+                <td>{game.year}</td>
+                <td>{game.genre}</td>
+                <td>{game.publisher}</td>
+                <td>{game.northAmericaSales}</td>
+                <td>{game.europeSales}</td>
+                <td>{game.japanSales}</td>
+                <td>{game.otherSales}</td>
+                <td>{game.globalSales}</td>
             </tr>
             );
           })}
           <tr>
-
           </tr>
         </tbody>
           
       </table>
      );
 }
-export default EntryData;
+export default VideoGameDetails;

@@ -1,6 +1,6 @@
 import Chart from 'react-google-charts';
 import React, { useState, useEffect } from 'react';
-import EntryData from '../../VideoGameDetails';
+import VideoGameDetails from '../../VideoGameDetails';
 
 
 const SalesChart =  ({videoGames}) => {
