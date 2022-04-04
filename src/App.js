@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import SalesChart from './Components/VideoGameChart/VideoGameChart';
 import EntryData from './VideoGameDetails';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <h3>Platform Sales In Millions</h3>
       <div>
         <SalesChart  videoGames = {videoGames}/>
+        <SearchBar videoGames = {videoGames}/>
       </div>
       <td></td>
 
