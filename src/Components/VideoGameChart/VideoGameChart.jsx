@@ -7,34 +7,34 @@ const SalesChart =  ({videoGames}) => {
 
     function generateData(){
 
-        console.log('Video Games', videoGames)
+        //console.log('Video Games', videoGames)
 
         let filteredGames = videoGames.filter(game => game.year >= 2013);
-        console.log('Filtered Games', filteredGames)
+        //console.log('Filtered Games', filteredGames)
 
         let platforms = filteredGames.map(game => {
             return game.platform
         });
-        console.log("Platform", platforms)
+        //console.log("Platform", platforms)
 
         let distinctPlatforms = [...new Set(platforms)]
-        console.log("Distinct Platforms", distinctPlatforms)
+        //console.log("Distinct Platforms", distinctPlatforms)
 
         let platformArrays = distinctPlatforms.map(platform =>{
 
             let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
-            console.log(`${platform} Games:`, allGamesForPlatform)
+            //console.log(`${platform} Games:`, allGamesForPlatform)
     
             let platformGlobalSales = allGamesForPlatform.map(game => game.globalSales)
-            console.log(`${platform} Global Sales:`, platformGlobalSales)
+            //console.log(`${platform} Global Sales:`, platformGlobalSales)
 
             let sumOfPlatformGlobalSales = platformGlobalSales.reduce((a, b) => a + b, 0);
-            console.log(`${platform} Sales Total:`,sumOfPlatformGlobalSales)
+            //console.log(`${platform} Global Sales Total:`,sumOfPlatformGlobalSales)
 
             return [platform, sumOfPlatformGlobalSales, "blue"]
         
         });
-        console.log("platform Arrays", platformArrays)
+        //console.log("platform Arrays", platformArrays)
     
         const data =[
             ["Platform", "Sales", {role: "style"}],
