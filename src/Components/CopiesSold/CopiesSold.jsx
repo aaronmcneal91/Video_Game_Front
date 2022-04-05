@@ -16,20 +16,23 @@ const CopiesSold = (props) => {
 
         let platformArrays = distinctPlatforms.map(platform => {
             
+            let gamesPerPlatform = props.filterVideoGames.filter(game => game.platform == platform)
+            //console.log(`${platform}: `, gamesPerPlatform)
+
+            let gameSalesPerPlatform = gamesPerPlatform.map(game => game.globalSales)
+            console.log(`${platform}: `, gameSalesPerPlatform)
+
+            // let distinctVideoGames = [...new Set(gameSalesPerPlatform)]
+            //console.log('VG', distinctVideoGames)
             
-            let gameSalesPerPlatform = props.filterVideoGames.filter(game => game.globalSales > 2)
-            
-                console.log(gameSalesPerPlatform)
-            
-            
-            return [platform, gameSalesPerPlatform]
+            return [platform, gamesPerPlatform]
         })
 
         const data = [
             ['Platform', 'Copies Sold'],
              ...platformArrays
         ]
-        console.log(data)
+        //console.log(data)
 
         return data
     }
