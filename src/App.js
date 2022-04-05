@@ -36,8 +36,8 @@ function App() {
   
   return (
     <div>
-      <h3>Platform Sales In Millions</h3>
       <div>
+        <h3>Platform Sales In Millions Since 2013</h3>
         <SalesChart  videoGames = {videoGames}/>
         {/* <CopiesSold filterVideoGames= {filteredVideoGames} videoGames={videoGames} /> */}
         <SearchBar filterVideoGames={filterVideoGames}/>
